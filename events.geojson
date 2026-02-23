@@ -8,7 +8,7 @@
         "name": "The Shire",
         "type": "Hobbitland",
         "date": "TA 3001",
-        "description": "Bilbo's birthday party; starting point for Frodo.",
+        "description": "Bilbo's birthday party; starting point for Frodo. This is a test update",
         "source": "Fellowship of the Ring, Book 1"
       },
       "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
