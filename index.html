@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Middle-earth Map Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .sidebar { position: absolute; top:10px; left:10px; z-index:1000; background:#fff; padding:8px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,0.3); max-width:260px; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="sidebar"><strong>Middle-earth Map</strong><div id="list"></div></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Initialize map with a view that fits the placeholder coordinates
+    const map = L.map('map').setView([50.5, 2.0], 5);
+
+    // Simple neutral basemap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map tiles © OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Load GeoJSON file
+    fetch('events.geojson')
+      .then(res => res.json())
+      .then(data => {
+        const geojsonLayer = L.geoJSON(data, {
+          onEachFeature: function(feature, layer) {
+            const p = feature.properties || {};
+            const html = `<b>${p.name || 'Unknown'}</b><br><i>${p.type || ''}</i><br>${p.date || ''}<br>${p.description || ''}`;
+            layer.bindPopup(html);
+            // add to sidebar list
+            const list = document.getElementById('list');
+            const item = document.createElement('div');
+            item.style.marginTop = '6px';
+            item.innerHTML = `<a href="#" data-id="${p.id}">${p.name}</a>`;
+            list.appendChild(item);
+            item.querySelector('a').addEventListener('click', (e) => {
+              e.preventDefault();
+              map.fitBounds(layer.getBounds ? layer.getBounds() : layer.getLatLng().toBounds(0.5));
+              layer.openPopup();
+            });
+          },
+          pointToLayer: function(feature, latlng) {
+            return L.marker(latlng);
+          }
+        }).addTo(map);
+
+        // Fit map to features
+        try {
+          map.fitBounds(geojsonLayer.getBounds(), {padding:[40,40]});
+        } catch(e) { /* single point fallback */ }
+      })
+      .catch(err => {
+        console.error('Failed to load events.geojson', err);
+        alert('Could not load events.geojson. Make sure the file is in the same folder as index.html.');
+      });
+  </script>
+</body>
+</html>

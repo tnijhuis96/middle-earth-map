@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "shire",
+        "name": "The Shire",
+        "type": "Hobbitland",
+        "date": "TA 3001",
+        "description": "Bilbo's birthday party; starting point for Frodo.",
+        "source": "Fellowship of the Ring, Book 1"
+      },
+      "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bree",
+        "name": "Bree",
+        "type": "Town",
+        "date": "TA 3018",
+        "description": "Bree and the Prancing Pony; meeting with Strider.",
+        "source": "Fellowship of the Ring, Book 1"
+      },
+      "geometry": { "type": "Point", "coordinates": [-1.0, 50.5] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "weathertop",
+        "name": "Weathertop Amon Sûl",
+        "type": "Hill",
+        "date": "TA 3018",
+        "description": "Attack by Ringwraiths; Frodo wounded.",
+        "source": "Fellowship of the Ring, Book 1"
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.2, 50.9] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "rivendell",
+        "name": "Rivendell",
+        "type": "Elrond's House",
+        "date": "TA 3018",
+        "description": "Council of Elrond; Fellowship formed.",
+        "source": "Fellowship of the Ring, Book 2"
+      },
+      "geometry": { "type": "Point", "coordinates": [1.2, 52.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "moria",
+        "name": "Moria",
+        "type": "Dwarf-realm",
+        "date": "TA 3019",
+        "description": "Fellowship crosses the Mines of Moria; Gandalf falls.",
+        "source": "Fellowship of the Ring, Book 2"
+      },
+      "geometry": { "type": "Point", "coordinates": [2.8, 51.2] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lorien",
+        "name": "Lothlorien",
+        "type": "Elven Realm",
+        "date": "TA 3019",
+        "description": "Fellowship rests and receives gifts.",
+        "source": "Fellowship of the Ring, Book 2"
+      },
+      "geometry": { "type": "Point", "coordinates": [3.6, 50.8] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "amon-hen",
+        "name": "Amon Hen",
+        "type": "Watch Hill",
+        "date": "TA 3019",
+        "description": "Breaking of the Fellowship; Boromir slain.",
+        "source": "Fellowship of the Ring, Book 2"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.2, 50.2] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "isengard",
+        "name": "Isengard",
+        "type": "Fortress",
+        "date": "TA 3019",
+        "description": "Saruman's stronghold; later flooded by Ents.",
+        "source": "Fellowship of the Ring, Book 2"
+      },
+      "geometry": { "type": "Point", "coordinates": [2.0, 49.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "minas-tirith",
+        "name": "Minas Tirith",
+        "type": "City",
+        "date": "TA 3019",
+        "description": "Capital of Gondor; later major battle.",
+        "source": "Return of the King, Book 5"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.0, 48.5] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mordor",
+        "name": "Mordor",
+        "type": "Land of Shadow",
+        "date": "TA 3019",
+        "description": "Mount Doom and Barad-dur; final events of the War of the Ring.",
+        "source": "Return of the King, Book 6"
+      },
+      "geometry": { "type": "Point", "coordinates": [8.5, 47.0] }
+    }
+  ]
+}
