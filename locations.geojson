@@ -1,0 +1,285 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "shire",
+        "name": "The Shire",
+        "type": "Region",
+        "description": "Home of the Hobbits. A peaceful, rolling countryside with green hills and comfortable holes."
+      },
+      "geometry": { "type": "Point", "coordinates": [1.295, 48.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "hobbiton",
+        "name": "Hobbiton",
+        "type": "Town",
+        "description": "Principal town of the Shire where Bilbo and Frodo lived."
+      },
+      "geometry": { "type": "Point", "coordinates": [1.195, 48.47] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bree",
+        "name": "Bree",
+        "type": "Town",
+        "description": "A settlement of Big Folk and hobbits, home to the Prancing Pony inn."
+      },
+      "geometry": { "type": "Point", "coordinates": [2.795, 47.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "weathertop",
+        "name": "Weathertop (Amon Sûl)",
+        "type": "Hill",
+        "description": "A prominent hilltop overlooking the landscape, site of an ancient watch-tower."
+      },
+      "geometry": { "type": "Point", "coordinates": [3.595, 48.27] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "rivendell",
+        "name": "Rivendell (Imladris)",
+        "type": "Elven Settlement",
+        "description": "A hidden elven city founded by Elrond, a refuge of peace and wisdom."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.995, 49.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "moria",
+        "name": "Moria (Khazad-dûm)",
+        "type": "Dwarf-realm",
+        "description": "Vast underground kingdom of dwarven mines, once great but now abandoned and dangerous."
+      },
+      "geometry": { "type": "Point", "coordinates": [6.595, 48.57] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lorien",
+        "name": "Lothlórien",
+        "type": "Elven Realm",
+        "description": "Golden woods of the Elves ruled by Galadriel, filled with mallorn trees."
+      },
+      "geometry": { "type": "Point", "coordinates": [7.395, 48.17] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "amon-hen",
+        "name": "Amon Hen",
+        "type": "Hill",
+        "description": "Hill of the Eye, location where the Fellowship broke apart."
+      },
+      "geometry": { "type": "Point", "coordinates": [7.995, 47.57] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "isengard",
+        "name": "Isengard",
+        "type": "Fortress",
+        "description": "Stronghold of Saruman, surrounded by the tower Orthanc, now in ruins."
+      },
+      "geometry": { "type": "Point", "coordinates": [5.795, 46.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "rohan",
+        "name": "Rohan",
+        "type": "Kingdom",
+        "description": "Kingdom of the Rohirrim, a noble kingdom of horses and warriors."
+      },
+      "geometry": { "type": "Point", "coordinates": [5.295, 45.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "edoras",
+        "name": "Edoras",
+        "type": "Capital City",
+        "description": "Capital city of Rohan, seat of the kings of the Rohirrim."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.995, 46.07] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "helms-deep",
+        "name": "Helm's Deep",
+        "type": "Fortress",
+        "description": "Great fortress of Rohan, a stronghold carved into the mountains."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.595, 46.57] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "gondor",
+        "name": "Gondor",
+        "type": "Kingdom",
+        "description": "Great kingdom of Men, once mighty but fallen into shadow."
+      },
+      "geometry": { "type": "Point", "coordinates": [8.795, 45.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "minas-tirith",
+        "name": "Minas Tirith",
+        "type": "Capital City",
+        "description": "Capital of Gondor, the white city with seven levels built into a mountainside."
+      },
+      "geometry": { "type": "Point", "coordinates": [9.595, 45.67] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "dol-amroth",
+        "name": "Dol Amroth",
+        "type": "Port City",
+        "description": "Coastal city of Gondor, ruled by Prince Imrahil, known for its white swans."
+      },
+      "geometry": { "type": "Point", "coordinates": [8.295, 44.57] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mordor",
+        "name": "Mordor",
+        "type": "Land of Shadow",
+        "description": "Domain of Sauron, land of darkness and despair, guarded by mountains of fire."
+      },
+      "geometry": { "type": "Point", "coordinates": [12.295, 44.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mount-doom",
+        "name": "Mount Doom",
+        "type": "Volcano",
+        "description": "The fiery mountain where the One Ring was forged and must be destroyed."
+      },
+      "geometry": { "type": "Point", "coordinates": [12.595, 44.17] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "barad-dur",
+        "name": "Barad-dûr",
+        "type": "Fortress",
+        "description": "The Dark Tower of Sauron, an awful structure that dominates Mordor."
+      },
+      "geometry": { "type": "Point", "coordinates": [12.395, 44.47] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "mirkwood",
+        "name": "Mirkwood",
+        "type": "Forest",
+        "description": "Dark and dangerous forest, home to giant spiders and other fell creatures."
+      },
+      "geometry": { "type": "Point", "coordinates": [9.295, 48.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "erebor",
+        "name": "Erebor (Lonely Mountain)",
+        "type": "Dwarf Kingdom",
+        "description": "Great mountain kingdom of dwarves, home to vast treasures and Smaug's hoard."
+      },
+      "geometry": { "type": "Point", "coordinates": [9.795, 49.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lake-town",
+        "name": "Lake-town (Esgaroth)",
+        "type": "Town",
+        "description": "Town of Men built on the waters of Long Lake, trade center between the Free Peoples."
+      },
+      "geometry": { "type": "Point", "coordinates": [10.295, 49.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tharbad",
+        "name": "Tharbad",
+        "type": "Ruined City",
+        "description": "Ancient ruined city on the Greyflood, once a great center of trade."
+      },
+      "geometry": { "type": "Point", "coordinates": [5.595, 46.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "gollum-pools",
+        "name": "Misty Mountains",
+        "type": "Mountain Range",
+        "description": "Great range of mountains, home to goblin strongholds and ancient evil."
+      },
+      "geometry": { "type": "Point", "coordinates": [5.995, 48.17] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "grey-havens",
+        "name": "Grey Havens (Mithlond)",
+        "type": "Port",
+        "description": "Coastal port in the west where Elves depart Middle-earth to sail to Valinor."
+      },
+      "geometry": { "type": "Point", "coordinates": [0.795, 49.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tharbad-ruins",
+        "name": "The Dead Marshes",
+        "type": "Swamp",
+        "description": "Desolate marshes filled with the restless dead and evil creatures."
+      },
+      "geometry": { "type": "Point", "coordinates": [10.995, 44.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "anduin-river",
+        "name": "Anduin (Great River)",
+        "type": "River",
+        "description": "Mightiest river of Middle-earth, flowing from north to south."
+      },
+      "geometry": { "type": "Point", "coordinates": [8.295, 46.87] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "osgiliath",
+        "name": "Osgiliath",
+        "type": "Ruined City",
+        "description": "Ancient capital of Gondor, now ruined and abandoned on the banks of Anduin."
+      },
+      "geometry": { "type": "Point", "coordinates": [8.995, 45.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "minas-morgul",
+        "name": "Minas Morgul",
+        "type": "Fortress of Evil",
+        "description": "Fortress of the Ringwraiths, pale and terrible, guarding the pass of Cirith Ungol."
+      },
+      "geometry": { "type": "Point", "coordinates": [10.795, 45.17] }
+    }
+  ]
+}
