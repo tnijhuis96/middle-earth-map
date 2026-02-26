@@ -39,11 +39,12 @@
       map.setMaxBounds(imgBounds);
 
       // conversion settings (can be tuned if points are misaligned)
-      let scaleX = imgWidth / (realBounds.lonMax - realBounds.lonMin);
-      let scaleY = imgHeight / (realBounds.latMax - realBounds.latMin);
-      // Anchored to Hobbiton at pixel [565.75, 651.5] with full coordinate range
-      let offsetX = 403.716;
-      let offsetY = 8423.707;
+      // Using uniform scale of 60 pixels/unit to fit all 38 features within image bounds
+      let scaleX = 60.0;
+      let scaleY = 60.0;
+      // Anchored to Hobbiton at pixel [565.75, 651.5]
+      let offsetX = 494.05;
+      let offsetY = 3559.7;
 
       function toPixel(lat, lon) {
         // linear transformation: pixelX = lon * scaleX + offsetX
@@ -116,13 +117,13 @@
 
       // Fellowship journey route (in pixel coordinates [y, x] for Leaflet CRS.Simple)
       const fellowshipCoords = [
-        [667.54, 579.31],    // The Shire
-        [747.71, 782.70],    // Bree
-        [683.57, 891.17],    // Weathertop Amon Sûl
-        [507.18, 1081.00],   // Rivendell
-        [635.46, 1297.95],   // Moria
-        [699.61, 1406.43],   // Lothlórien
-        [795.82, 1487.78]    // Amon Hen
+        [657.5, 571.8],    // The Shire
+        [687.5, 661.8],    // Bree
+        [663.5, 709.8],    // Weathertop Amon Sûl
+        [597.5, 793.8],    // Rivendell
+        [645.5, 889.8],    // Moria
+        [669.5, 937.8],    // Lothlorien
+        [705.5, 973.8]     // Amon Hen
       ];
       const ant = L.polyline.antPath(fellowshipCoords, {
         delay: 400,
