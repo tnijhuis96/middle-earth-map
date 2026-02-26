@@ -114,15 +114,15 @@
           alert('Could not load locations.geojson. Make sure the file is in the same folder as index.html.');
         });
 
-      // Fellowship journey route (in pixel coordinates)
+      // Fellowship journey route (in pixel coordinates [y, x] for Leaflet CRS.Simple)
       const fellowshipCoords = [
-        [245.8, 64.7],    // The Shire
-        [326.0, 268.1],   // Bree
-        [261.8, 376.6],   // Weathertop Amon Sûl
-        [85.5, 566.4],    // Rivendell
-        [213.7, 783.4],   // Moria
-        [277.9, 891.9],   // Lothlórien
-        [374.1, 973.2]    // Amon Hen
+        [667.54, 579.31],    // The Shire
+        [747.71, 782.70],    // Bree
+        [683.57, 891.17],    // Weathertop Amon Sûl
+        [507.18, 1081.00],   // Rivendell
+        [635.46, 1297.95],   // Moria
+        [699.61, 1406.43],   // Lothlórien
+        [795.82, 1487.78]    // Amon Hen
       ];
       const ant = L.polyline.antPath(fellowshipCoords, {
         delay: 400,
