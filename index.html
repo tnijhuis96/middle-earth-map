@@ -99,9 +99,9 @@
               });
             },
             pointToLayer: function(feature, latlng) {
-              // GeoJSON coordinates are already in pixel format [x, y]
+              // GeoJSON coordinates are in [x, y] format (width, height)
               // Leaflet CRS.Simple expects [y, x] format, so swap them
-              return L.marker([latlng.lng, latlng.lat]);
+              return L.marker([latlng.lat, latlng.lng]);
             }
           }).addTo(map);
 
