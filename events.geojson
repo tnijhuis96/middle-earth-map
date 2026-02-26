@@ -8,10 +8,16 @@
         "name": "The Shire",
         "type": "Hobbitland",
         "date": "TA 3001",
-        "description": "Bilbo's birthday party; starting point for Frodo. This is a test update",
+        "description": "Bilbo's birthday party; starting point for Frodo.",
         "source": "Fellowship of the Ring, Book 1"
       },
-      "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.295,
+          48.37
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -23,19 +29,31 @@
         "description": "Bree and the Prancing Pony; meeting with Strider.",
         "source": "Fellowship of the Ring, Book 1"
       },
-      "geometry": { "type": "Point", "coordinates": [-1.0, 50.5] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.795,
+          47.87
+        ]
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "id": "weathertop",
-        "name": "Weathertop Amon Sûl",
+        "name": "Weathertop Amon S\u00fbl",
         "type": "Hill",
         "date": "TA 3018",
         "description": "Attack by Ringwraiths; Frodo wounded.",
         "source": "Fellowship of the Ring, Book 1"
       },
-      "geometry": { "type": "Point", "coordinates": [-0.2, 50.9] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.595,
+          48.27
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -47,7 +65,13 @@
         "description": "Council of Elrond; Fellowship formed.",
         "source": "Fellowship of the Ring, Book 2"
       },
-      "geometry": { "type": "Point", "coordinates": [1.2, 52.0] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.995,
+          49.37
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -59,7 +83,13 @@
         "description": "Fellowship crosses the Mines of Moria; Gandalf falls.",
         "source": "Fellowship of the Ring, Book 2"
       },
-      "geometry": { "type": "Point", "coordinates": [2.8, 51.2] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.595,
+          48.57
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -71,7 +101,13 @@
         "description": "Fellowship rests and receives gifts.",
         "source": "Fellowship of the Ring, Book 2"
       },
-      "geometry": { "type": "Point", "coordinates": [3.6, 50.8] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.395,
+          48.17
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -83,7 +119,13 @@
         "description": "Breaking of the Fellowship; Boromir slain.",
         "source": "Fellowship of the Ring, Book 2"
       },
-      "geometry": { "type": "Point", "coordinates": [4.2, 50.2] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.995,
+          47.57
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -95,7 +137,13 @@
         "description": "Saruman's stronghold; later flooded by Ents.",
         "source": "Fellowship of the Ring, Book 2"
       },
-      "geometry": { "type": "Point", "coordinates": [2.0, 49.0] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.795,
+          46.37
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -107,7 +155,13 @@
         "description": "Capital of Gondor; later major battle.",
         "source": "Return of the King, Book 5"
       },
-      "geometry": { "type": "Point", "coordinates": [6.0, 48.5] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.595,
+          45.67
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -119,175 +173,13 @@
         "description": "Mount Doom and Barad-dur; final events of the War of the Ring.",
         "source": "Return of the King, Book 6"
       },
-      "geometry": { "type": "Point", "coordinates": [8.5, 47.0] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "long-expected-party",
-        "name": "Bilbo's Party and Departure",
-        "type": "Event",
-        "chapter": "A Long-expected Party",
-        "chapter_number": 1,
-        "approximate_date": "TA 3001",
-        "description": "Bilbo celebrates his 111th birthday, uses the Ring to disappear, and leaves the Shire, bequeathing the Ring to Frodo.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "shadow-of-the-past",
-        "name": "Gandalf reveals the Ring's nature",
-        "type": "Revelation",
-        "chapter": "The Shadow of the Past",
-        "chapter_number": 2,
-        "approximate_date": "TA 3018 (discovery confirmed)",
-        "description": "Gandalf explains the history and danger of the Ring to Frodo and urges him to leave the Shire.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "three-is-company",
-        "name": "Frodo leaves Hobbiton",
-        "type": "Departure",
-        "chapter": "Three is Company",
-        "chapter_number": 3,
-        "approximate_date": "TA 3018",
-        "description": "Frodo departs Bag End with Sam and Pippin, beginning the journey out of the Shire.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.4, 50.95] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "short-cut-to-mushrooms",
-        "name": "Travel through the Shire",
-        "type": "Travel",
-        "chapter": "A Short Cut to Mushrooms",
-        "chapter_number": 4,
-        "approximate_date": "TA 3018",
-        "description": "Frodo and companions travel across the Shire, encountering ordinary rural hazards and meeting Farmer Maggot later in the narrative.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.2, 50.9] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "conspiracy-unmasked",
-        "name": "Conspiracy revealed at Bag End",
-        "type": "Domestic event",
-        "chapter": "A Conspiracy Unmasked",
-        "chapter_number": 5,
-        "approximate_date": "TA 3018",
-        "description": "Frodo learns that his friends have known about the Ring and planned to help him; preparations to leave accelerate.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.5, 51.0] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "old-forest",
-        "name": "The Old Forest and Tom Bombadil",
-        "type": "Encounter",
-        "chapter": "The Old Forest",
-        "chapter_number": 6,
-        "approximate_date": "TA 3018",
-        "description": "The hobbits enter the Old Forest, are trapped by Old Man Willow, and are rescued by Tom Bombadil.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-2.0, 50.8] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "tom-bombadil-house",
-        "name": "In the House of Tom Bombadil",
-        "type": "Refuge",
-        "chapter": "In the House of Tom Bombadil",
-        "chapter_number": 7,
-        "approximate_date": "TA 3018",
-        "description": "The hobbits stay with Tom Bombadil and Goldberry, learning more about the Old Forest and receiving hospitality.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-1.95, 50.78] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "barrow-downs",
-        "name": "Fog on the Barrow-downs",
-        "type": "Danger",
-        "chapter": "Fog on the Barrow-downs",
-        "chapter_number": 8,
-        "approximate_date": "TA 3018",
-        "description": "The hobbits are trapped by a barrow-wight on the Barrow-downs and are freed by Tom Bombadil, who arms them.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-1.8, 50.6] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "prancing-pony",
-        "name": "At the Sign of the Prancing Pony",
-        "type": "Meeting",
-        "chapter": "At the Sign of the Prancing Pony",
-        "chapter_number": 9,
-        "approximate_date": "TA 3018",
-        "description": "The hobbits arrive in Bree and stay at the Prancing Pony, where they first encounter Aragorn (Strider) indirectly.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-1.0, 50.5] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "strider-introduction",
-        "name": "Strider reveals himself",
-        "type": "Ally introduction",
-        "chapter": "Strider",
-        "chapter_number": 10,
-        "approximate_date": "TA 3018",
-        "description": "Aragorn (Strider) meets the hobbits openly, offers guidance, and becomes their protector on the road.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-1.0, 50.5] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "knife-in-the-dark",
-        "name": "Weathertop attack",
-        "type": "Conflict",
-        "chapter": "A Knife in the Dark",
-        "chapter_number": 11,
-        "approximate_date": "TA 3018",
-        "description": "At Weathertop (Amon Sûl) the hobbits and Aragorn are attacked by Ringwraiths; Frodo is wounded by a Morgul blade.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [-0.2, 50.9] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "flight-to-the-ford",
-        "name": "Flight to the Ford of Bruinen",
-        "type": "Climax",
-        "chapter": "Flight to the Ford",
-        "chapter_number": 12,
-        "approximate_date": "TA 3018",
-        "description": "Aragorn, Glorfindel (in some editions/interpretations), and the hobbits race to the Ford of Bruinen where Frodo is carried across and the Ringwraiths are swept away by the flood.",
-        "source": "The Fellowship of the Ring, Book One"
-      },
-      "geometry": { "type": "Point", "coordinates": [0.9, 52.1] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.295,
+          44.37
+        ]
+      }
     }
   ]
 }
