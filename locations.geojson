@@ -7,13 +7,17 @@
         "id": "shire",
         "name": "The Shire",
         "type": "Region",
-        "description": "Home of the Hobbits. A peaceful, rolling countryside with green hills and comfortable holes."
+        "description": "Home of the Hobbits. A peaceful, rolling countryside with green hills and comfortable holes.",
+        "original_coordinates": [
+          1.295,
+          48.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.295,
-          48.37
+          579.309220338983,
+          667.5350701754332
         ]
       }
     },
@@ -23,13 +27,17 @@
         "id": "hobbiton",
         "name": "Hobbiton",
         "type": "Town",
-        "description": "Principal town of the Shire where Bilbo and Frodo lived."
+        "description": "Principal town of the Shire where Bilbo and Frodo lived.",
+        "original_coordinates": [
+          1.195,
+          48.47
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.195,
-          48.47
+          565.7498983050848,
+          651.4999824561346
         ]
       }
     },
@@ -39,13 +47,17 @@
         "id": "bree",
         "name": "Bree",
         "type": "Town",
-        "description": "A settlement of Big Folk and hobbits, home to the Prancing Pony inn."
+        "description": "A settlement of Big Folk and hobbits, home to the Prancing Pony inn.",
+        "original_coordinates": [
+          2.795,
+          47.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.795,
-          47.87
+          782.6990508474576,
+          747.7105087719247
         ]
       }
     },
@@ -55,13 +67,17 @@
         "id": "weathertop",
         "name": "Weathertop (Amon S\u00fbl)",
         "type": "Hill",
-        "description": "A prominent hilltop overlooking the landscape, site of an ancient watch-tower."
+        "description": "A prominent hilltop overlooking the landscape, site of an ancient watch-tower.",
+        "original_coordinates": [
+          3.595,
+          48.27
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.595,
-          48.27
+          891.173627118644,
+          683.570157894731
         ]
       }
     },
@@ -71,13 +87,17 @@
         "id": "rivendell",
         "name": "Rivendell (Imladris)",
         "type": "Elven Settlement",
-        "description": "A hidden elven city founded by Elrond, a refuge of peace and wisdom."
+        "description": "A hidden elven city founded by Elrond, a refuge of peace and wisdom.",
+        "original_coordinates": [
+          4.995,
+          49.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.995,
-          49.37
+          1081.0041355932203,
+          507.18419298245044
         ]
       }
     },
@@ -87,13 +107,17 @@
         "id": "moria",
         "name": "Moria (Khazad-d\u00fbm)",
         "type": "Dwarf-realm",
-        "description": "Vast underground kingdom of dwarven mines, once great but now abandoned and dangerous."
+        "description": "Vast underground kingdom of dwarven mines, once great but now abandoned and dangerous.",
+        "original_coordinates": [
+          6.595,
+          48.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.595,
-          48.57
+          1297.953288135593,
+          635.464894736836
         ]
       }
     },
@@ -103,13 +127,17 @@
         "id": "lorien",
         "name": "Lothl\u00f3rien",
         "type": "Elven Realm",
-        "description": "Golden woods of the Elves ruled by Galadriel, filled with mallorn trees."
+        "description": "Golden woods of the Elves ruled by Galadriel, filled with mallorn trees.",
+        "original_coordinates": [
+          7.395,
+          48.17
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.395,
-          48.17
+          1406.4278644067795,
+          699.6052456140296
         ]
       }
     },
@@ -119,13 +147,17 @@
         "id": "amon-hen",
         "name": "Amon Hen",
         "type": "Hill",
-        "description": "Hill of the Eye, location where the Fellowship broke apart."
+        "description": "Hill of the Eye, location where the Fellowship broke apart.",
+        "original_coordinates": [
+          7.995,
+          47.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.995,
-          47.57
+          1487.7837966101692,
+          795.8157719298188
         ]
       }
     },
@@ -135,13 +167,17 @@
         "id": "isengard",
         "name": "Isengard",
         "type": "Fortress",
-        "description": "Stronghold of Saruman, surrounded by the tower Orthanc, now in ruins."
+        "description": "Stronghold of Saruman, surrounded by the tower Orthanc, now in ruins.",
+        "original_coordinates": [
+          5.795,
+          46.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.795,
-          46.37
+          1189.4787118644067,
+          988.2368245613989
         ]
       }
     },
@@ -151,13 +187,17 @@
         "id": "rohan",
         "name": "Rohan",
         "type": "Kingdom",
-        "description": "Kingdom of the Rohirrim, a noble kingdom of horses and warriors."
+        "description": "Kingdom of the Rohirrim, a noble kingdom of horses and warriors.",
+        "original_coordinates": [
+          5.295,
+          45.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.295,
-          45.87
+          1121.6821016949152,
+          1068.4122631578894
         ]
       }
     },
@@ -167,13 +207,17 @@
         "id": "edoras",
         "name": "Edoras",
         "type": "Capital City",
-        "description": "Capital city of Rohan, seat of the kings of the Rohirrim."
+        "description": "Capital city of Rohan, seat of the kings of the Rohirrim.",
+        "original_coordinates": [
+          4.995,
+          46.07
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.995,
-          46.07
+          1081.0041355932203,
+          1036.342087719293
         ]
       }
     },
@@ -183,13 +227,17 @@
         "id": "helms-deep",
         "name": "Helm's Deep",
         "type": "Fortress",
-        "description": "Great fortress of Rohan, a stronghold carved into the mountains."
+        "description": "Great fortress of Rohan, a stronghold carved into the mountains.",
+        "original_coordinates": [
+          4.595,
+          46.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.595,
-          46.57
+          1026.7668474576271,
+          956.1666491228016
         ]
       }
     },
@@ -199,13 +247,17 @@
         "id": "gondor",
         "name": "Gondor",
         "type": "Kingdom",
-        "description": "Great kingdom of Men, once mighty but fallen into shadow."
+        "description": "Great kingdom of Men, once mighty but fallen into shadow.",
+        "original_coordinates": [
+          8.795,
+          45.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.795,
-          45.37
+          1596.2583728813556,
+          1148.5877017543808
         ]
       }
     },
@@ -215,13 +267,17 @@
         "id": "minas-tirith",
         "name": "Minas Tirith",
         "type": "Capital City",
-        "description": "Capital of Gondor, the white city with seven levels built into a mountainside."
+        "description": "Capital of Gondor, the white city with seven levels built into a mountainside.",
+        "original_coordinates": [
+          9.595,
+          45.67
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.595,
-          45.67
+          1704.7329491525425,
+          1100.4824385964857
         ]
       }
     },
@@ -231,13 +287,17 @@
         "id": "dol-amroth",
         "name": "Dol Amroth",
         "type": "Port City",
-        "description": "Coastal city of Gondor, ruled by Prince Imrahil, known for its white swans."
+        "description": "Coastal city of Gondor, ruled by Prince Imrahil, known for its white swans.",
+        "original_coordinates": [
+          8.295,
+          44.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.295,
-          44.57
+          1528.4617627118641,
+          1276.8684035087663
         ]
       }
     },
@@ -247,13 +307,17 @@
         "id": "mordor",
         "name": "Mordor",
         "type": "Land of Shadow",
-        "description": "Domain of Sauron, land of darkness and despair, guarded by mountains of fire."
+        "description": "Domain of Sauron, land of darkness and despair, guarded by mountains of fire.",
+        "original_coordinates": [
+          12.295,
+          44.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.295,
-          44.37
+          2070.8346440677965,
+          1308.9385789473636
         ]
       }
     },
@@ -263,13 +327,17 @@
         "id": "mount-doom",
         "name": "Mount Doom",
         "type": "Volcano",
-        "description": "The fiery mountain where the One Ring was forged and must be destroyed."
+        "description": "The fiery mountain where the One Ring was forged and must be destroyed.",
+        "original_coordinates": [
+          12.595,
+          44.17
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.595,
-          44.17
+          2111.5126101694914,
+          1341.00875438596
         ]
       }
     },
@@ -279,13 +347,17 @@
         "id": "barad-dur",
         "name": "Barad-d\u00fbr",
         "type": "Fortress",
-        "description": "The Dark Tower of Sauron, an awful structure that dominates Mordor."
+        "description": "The Dark Tower of Sauron, an awful structure that dominates Mordor.",
+        "original_coordinates": [
+          12.395,
+          44.47
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.395,
-          44.47
+          2084.393966101695,
+          1292.903491228065
         ]
       }
     },
@@ -295,13 +367,17 @@
         "id": "mirkwood",
         "name": "Mirkwood",
         "type": "Forest",
-        "description": "Dark and dangerous forest, home to giant spiders and other fell creatures."
+        "description": "Dark and dangerous forest, home to giant spiders and other fell creatures.",
+        "original_coordinates": [
+          9.295,
+          48.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.295,
-          48.87
+          1664.054983050847,
+          587.3596315789418
         ]
       }
     },
@@ -311,13 +387,17 @@
         "id": "erebor",
         "name": "Erebor (Lonely Mountain)",
         "type": "Dwarf Kingdom",
-        "description": "Great mountain kingdom of dwarves, home to vast treasures and Smaug's hoard."
+        "description": "Great mountain kingdom of dwarves, home to vast treasures and Smaug's hoard.",
+        "original_coordinates": [
+          9.795,
+          49.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.795,
-          49.87
+          1731.8515932203386,
+          427.00875438595904
         ]
       }
     },
@@ -327,13 +407,17 @@
         "id": "lake-town",
         "name": "Lake-town (Esgaroth)",
         "type": "Town",
-        "description": "Town of Men built on the waters of Long Lake, trade center between the Free Peoples."
+        "description": "Town of Men built on the waters of Long Lake, trade center between the Free Peoples.",
+        "original_coordinates": [
+          10.295,
+          49.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.295,
-          49.37
+          1799.64820338983,
+          507.18419298245044
         ]
       }
     },
@@ -343,13 +427,17 @@
         "id": "tharbad",
         "name": "Tharbad",
         "type": "Ruined City",
-        "description": "Ancient ruined city on the Greyflood, once a great center of trade."
+        "description": "Ancient ruined city on the Greyflood, once a great center of trade.",
+        "original_coordinates": [
+          5.595,
+          46.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.595,
-          46.87
+          1162.36006779661,
+          908.0613859649075
         ]
       }
     },
@@ -359,13 +447,17 @@
         "id": "gollum-pools",
         "name": "Misty Mountains",
         "type": "Mountain Range",
-        "description": "Great range of mountains, home to goblin strongholds and ancient evil."
+        "description": "Great range of mountains, home to goblin strongholds and ancient evil.",
+        "original_coordinates": [
+          5.995,
+          48.17
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.995,
-          48.17
+          1216.5973559322033,
+          699.6052456140296
         ]
       }
     },
@@ -375,13 +467,17 @@
         "id": "grey-havens",
         "name": "Grey Havens (Mithlond)",
         "type": "Port",
-        "description": "Coastal port in the west where Elves depart Middle-earth to sail to Valinor."
+        "description": "Coastal port in the west where Elves depart Middle-earth to sail to Valinor.",
+        "original_coordinates": [
+          0.795,
+          49.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.795,
-          49.37
+          511.5126101694915,
+          507.18419298245044
         ]
       }
     },
@@ -391,13 +487,17 @@
         "id": "tharbad-ruins",
         "name": "The Dead Marshes",
         "type": "Swamp",
-        "description": "Desolate marshes filled with the restless dead and evil creatures."
+        "description": "Desolate marshes filled with the restless dead and evil creatures.",
+        "original_coordinates": [
+          10.995,
+          44.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.995,
-          44.87
+          1894.5634576271182,
+          1228.7631403508722
         ]
       }
     },
@@ -407,13 +507,17 @@
         "id": "anduin-river",
         "name": "Anduin (Great River)",
         "type": "River",
-        "description": "Mightiest river of Middle-earth, flowing from north to south."
+        "description": "Mightiest river of Middle-earth, flowing from north to south.",
+        "original_coordinates": [
+          8.295,
+          46.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.295,
-          46.87
+          1528.4617627118641,
+          908.0613859649075
         ]
       }
     },
@@ -423,13 +527,17 @@
         "id": "osgiliath",
         "name": "Osgiliath",
         "type": "Ruined City",
-        "description": "Ancient capital of Gondor, now ruined and abandoned on the banks of Anduin."
+        "description": "Ancient capital of Gondor, now ruined and abandoned on the banks of Anduin.",
+        "original_coordinates": [
+          8.995,
+          45.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.995,
-          45.37
+          1623.3770169491522,
+          1148.5877017543808
         ]
       }
     },
@@ -439,13 +547,17 @@
         "id": "minas-morgul",
         "name": "Minas Morgul",
         "type": "Fortress of Evil",
-        "description": "Fortress of the Ringwraiths, pale and terrible, guarding the pass of Cirith Ungol."
+        "description": "Fortress of the Ringwraiths, pale and terrible, guarding the pass of Cirith Ungol.",
+        "original_coordinates": [
+          10.795,
+          45.17
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.795,
-          45.17
+          1867.444813559322,
+          1180.6578771929771
         ]
       }
     }

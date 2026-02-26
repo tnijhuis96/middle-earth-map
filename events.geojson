@@ -9,13 +9,17 @@
         "type": "Hobbitland",
         "date": "TA 3001",
         "description": "Bilbo's birthday party; starting point for Frodo.",
-        "source": "Fellowship of the Ring, Book 1"
+        "source": "Fellowship of the Ring, Book 1",
+        "original_coordinates": [
+          1.295,
+          48.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.295,
-          48.37
+          579.309220338983,
+          667.5350701754332
         ]
       }
     },
@@ -27,13 +31,17 @@
         "type": "Town",
         "date": "TA 3018",
         "description": "Bree and the Prancing Pony; meeting with Strider.",
-        "source": "Fellowship of the Ring, Book 1"
+        "source": "Fellowship of the Ring, Book 1",
+        "original_coordinates": [
+          2.795,
+          47.87
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.795,
-          47.87
+          782.6990508474576,
+          747.7105087719247
         ]
       }
     },
@@ -45,13 +53,17 @@
         "type": "Hill",
         "date": "TA 3018",
         "description": "Attack by Ringwraiths; Frodo wounded.",
-        "source": "Fellowship of the Ring, Book 1"
+        "source": "Fellowship of the Ring, Book 1",
+        "original_coordinates": [
+          3.595,
+          48.27
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.595,
-          48.27
+          891.173627118644,
+          683.570157894731
         ]
       }
     },
@@ -63,13 +75,17 @@
         "type": "Elrond's House",
         "date": "TA 3018",
         "description": "Council of Elrond; Fellowship formed.",
-        "source": "Fellowship of the Ring, Book 2"
+        "source": "Fellowship of the Ring, Book 2",
+        "original_coordinates": [
+          4.995,
+          49.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.995,
-          49.37
+          1081.0041355932203,
+          507.18419298245044
         ]
       }
     },
@@ -81,13 +97,17 @@
         "type": "Dwarf-realm",
         "date": "TA 3019",
         "description": "Fellowship crosses the Mines of Moria; Gandalf falls.",
-        "source": "Fellowship of the Ring, Book 2"
+        "source": "Fellowship of the Ring, Book 2",
+        "original_coordinates": [
+          6.595,
+          48.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.595,
-          48.57
+          1297.953288135593,
+          635.464894736836
         ]
       }
     },
@@ -99,13 +119,17 @@
         "type": "Elven Realm",
         "date": "TA 3019",
         "description": "Fellowship rests and receives gifts.",
-        "source": "Fellowship of the Ring, Book 2"
+        "source": "Fellowship of the Ring, Book 2",
+        "original_coordinates": [
+          7.395,
+          48.17
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.395,
-          48.17
+          1406.4278644067795,
+          699.6052456140296
         ]
       }
     },
@@ -117,13 +141,17 @@
         "type": "Watch Hill",
         "date": "TA 3019",
         "description": "Breaking of the Fellowship; Boromir slain.",
-        "source": "Fellowship of the Ring, Book 2"
+        "source": "Fellowship of the Ring, Book 2",
+        "original_coordinates": [
+          7.995,
+          47.57
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.995,
-          47.57
+          1487.7837966101692,
+          795.8157719298188
         ]
       }
     },
@@ -135,13 +163,17 @@
         "type": "Fortress",
         "date": "TA 3019",
         "description": "Saruman's stronghold; later flooded by Ents.",
-        "source": "Fellowship of the Ring, Book 2"
+        "source": "Fellowship of the Ring, Book 2",
+        "original_coordinates": [
+          5.795,
+          46.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.795,
-          46.37
+          1189.4787118644067,
+          988.2368245613989
         ]
       }
     },
@@ -153,13 +185,17 @@
         "type": "City",
         "date": "TA 3019",
         "description": "Capital of Gondor; later major battle.",
-        "source": "Return of the King, Book 5"
+        "source": "Return of the King, Book 5",
+        "original_coordinates": [
+          9.595,
+          45.67
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.595,
-          45.67
+          1704.7329491525425,
+          1100.4824385964857
         ]
       }
     },
@@ -171,13 +207,17 @@
         "type": "Land of Shadow",
         "date": "TA 3019",
         "description": "Mount Doom and Barad-dur; final events of the War of the Ring.",
-        "source": "Return of the King, Book 6"
+        "source": "Return of the King, Book 6",
+        "original_coordinates": [
+          12.295,
+          44.37
+        ]
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.295,
-          44.37
+          2070.8346440677965,
+          1308.9385789473636
         ]
       }
     }

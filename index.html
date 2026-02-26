@@ -18,8 +18,11 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="lib/leaflet-ant-path.js"></script>
   <script>
-    // real-world latitude/longitude bounds corresponding to the image overlay
-    const realBounds = { latMin: 47.0, latMax: 52.0, lonMin: -2.5, lonMax: 8.5 };
+    // real-world latitude/longitude bounds matching actual coordinate ranges in GeoJSON
+    // Longitude range: 0.795 to 12.595 (11.8 units) → pixels depend on Hobbiton anchor
+    // Latitude range: 44.17 to 49.87 (5.7 units) → pixels depend on Hobbiton anchor
+    // Hobbiton anchor: [1.195, 48.47] → pixel [565.75, 651.5]
+    const realBounds = { latMin: 44.17, latMax: 49.87, lonMin: 0.795, lonMax: 12.595 };
 
     // load the Middle-earth image to get its pixel dimensions before building map
     const img = new Image();
@@ -35,19 +38,54 @@
       L.imageOverlay(img.src, imgBounds).addTo(map);
       map.setMaxBounds(imgBounds);
 
+      // conversion settings (can be tuned if points are misaligned)
+      let scaleX = imgWidth / (realBounds.lonMax - realBounds.lonMin);
+      let scaleY = imgHeight / (realBounds.latMax - realBounds.latMin);
+      // Anchored to Hobbiton at pixel [565.75, 651.5] with full coordinate range
+      let offsetX = 403.716;
+      let offsetY = 8423.707;
+
       function toPixel(lat, lon) {
-        const x = (lon - realBounds.lonMin) / (realBounds.lonMax - realBounds.lonMin) * imgWidth;
-        const y = (realBounds.latMax - lat) / (realBounds.latMax - realBounds.latMin) * imgHeight;
+        // linear transformation: pixelX = lon * scaleX + offsetX
+        //                      pixelY = -lat * scaleY + offsetY
+        const x = lon * scaleX + offsetX;
+        const y = -lat * scaleY + offsetY;
         return [y, x];
       }
 
-      fetch('events.geojson')
+      // Validation: log coordinate bounds on load (corners in lat/lon then convert to pixels)
+      console.log('\n=== Map Configuration ===');
+      console.log('Image dimensions: ' + imgWidth + 'x' + imgHeight);
+      console.log('Coordinate bounds (original lat/lon):');
+      console.log('  Longitude: ' + realBounds.lonMin + ' to ' + realBounds.lonMax);
+      console.log('  Latitude: ' + realBounds.latMin + ' to ' + realBounds.latMax);
+      console.log('Converted to pixels (corners):');
+      const testCorners = [
+        {lon: realBounds.lonMin, lat: realBounds.latMax, label: 'NW corner'},
+        {lon: realBounds.lonMax, lat: realBounds.latMax, label: 'NE corner'},
+        {lon: realBounds.lonMin, lat: realBounds.latMin, label: 'SW corner'},
+        {lon: realBounds.lonMax, lat: realBounds.latMin, label: 'SE corner'}
+      ];
+      testCorners.forEach(corner => {
+        const [py, px] = toPixel(corner.lat, corner.lon);
+        console.log('  ' + corner.label + ': lon=' + corner.lon + ', lat=' + corner.lat + ' -> pixel [' + Math.round(px) + ', ' + Math.round(py) + ']');
+      });
+      console.log('======================\n');
+
+      // add listener so you can click on map and inspect pixel coords
+      map.on('click', e => {
+        console.log('map click pixel coords', e.latlng);
+        // show a temporary marker at click location
+        L.circleMarker(e.latlng, {radius:4, color:'blue'}).addTo(map).bindPopup(e.latlng.toString()).openPopup();
+      });
+
+      fetch('locations.geojson')
         .then(res => res.json())
         .then(data => {
           const geojsonLayer = L.geoJSON(data, {
             onEachFeature: function(feature, layer) {
               const p = feature.properties || {};
-              const html = `<b>${p.name || 'Unknown'}</b><br><i>${p.type || ''}</i><br>${p.date || ''}<br>${p.description || ''}`;
+              const html = `<b>${p.name || 'Unknown'}</b><br><i>${p.type || ''}</i><br>${p.description || ''}`;
               layer.bindPopup(html);
               const list = document.getElementById('list');
               const item = document.createElement('div');
@@ -61,8 +99,9 @@
               });
             },
             pointToLayer: function(feature, latlng) {
-              const pix = toPixel(latlng.lat, latlng.lng);
-              return L.marker(pix);
+              // GeoJSON coordinates are already in pixel format [x, y]
+              // Leaflet CRS.Simple expects [y, x] format, so swap them
+              return L.marker([latlng.lng, latlng.lat]);
             }
           }).addTo(map);
 
@@ -71,20 +110,20 @@
           } catch(e) { /* single point fallback */ }
         })
         .catch(err => {
-          console.error('Failed to load events.geojson', err);
-          alert('Could not load events.geojson. Make sure the file is in the same folder as index.html.');
+          console.error('Failed to load locations.geojson', err);
+          alert('Could not load locations.geojson. Make sure the file is in the same folder as index.html.');
         });
 
-      const fellowshipLatLon = [
-        [51.0, -2.5],   // The Shire
-        [50.5, -1.0],   // Bree
-        [50.9, -0.2],   // Weathertop Amon Sûl
-        [52.0, 1.2],    // Rivendell
-        [51.2, 2.8],    // Moria
-        [50.8, 3.6],    // Lothlorien
-        [50.2, 4.2]     // Amon Hen
+      // Fellowship journey route (in pixel coordinates)
+      const fellowshipCoords = [
+        [245.8, 64.7],    // The Shire
+        [326.0, 268.1],   // Bree
+        [261.8, 376.6],   // Weathertop Amon Sûl
+        [85.5, 566.4],    // Rivendell
+        [213.7, 783.4],   // Moria
+        [277.9, 891.9],   // Lothlórien
+        [374.1, 973.2]    // Amon Hen
       ];
-      const fellowshipCoords = fellowshipLatLon.map(([lat,lon]) => toPixel(lat, lon));
       const ant = L.polyline.antPath(fellowshipCoords, {
         delay: 400,
         dashArray: [10,20],
