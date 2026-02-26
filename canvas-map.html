@@ -172,7 +172,6 @@
     </div>
   </div>
 
-  <script src="lib/leaflet-ant-path.js"></script>
   <script>
     console.log('Canvas map script starting...');
     
@@ -206,7 +205,7 @@
     
     // Load image
     mapImage.onload = () => {
-      console.log('✓ Map image loaded:', mapState.image.width, 'x', mapState.image.height);
+      console.log('✓ Map image loaded:', mapImage.width, 'x', mapImage.height);
       mapState.image = mapImage;
       resizeCanvas();
       loadLocationsAndEvents();
@@ -255,12 +254,12 @@
           y: f.geometry.coordinates[1]
         }));
         
+        console.log('✓ Loaded ' + mapState.locations.length + ' locations');
+        console.log('✓ Loaded ' + mapState.events.length + ' events');
+        
         // Build sidebar
         buildSidebar();
         render();
-        
-        console.log('✓ Loaded ' + mapState.locations.length + ' locations');
-        console.log('✓ Loaded ' + mapState.events.length + ' events');
       } catch (err) {
         console.error('Failed to load GeoJSON:', err);
         const errorMsg = `Error loading location data:\n\n${err.message}\n\nMake sure locations.geojson and events.geojson are in the same folder as canvas-map.html.\n\nCheck browser console (F12) for more details.`;
