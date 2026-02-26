@@ -16,50 +16,83 @@
   <div class="sidebar"><strong>Middle-earth Map</strong><div id="list"></div></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="lib/leaflet-ant-path.js"></script>
   <script>
-    // Initialize map with a view that fits the placeholder coordinates
-    const map = L.map('map').setView([50.5, 2.0], 5);
+    // real-world latitude/longitude bounds corresponding to the image overlay
+    const realBounds = { latMin: 47.0, latMax: 52.0, lonMin: -2.5, lonMax: 8.5 };
 
-    // Simple neutral basemap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles © OpenStreetMap contributors'
-    }).addTo(map);
+    // load the Middle-earth image to get its pixel dimensions before building map
+    const img = new Image();
+    img.src = 'middle-earth-map.png';
+    img.onload = () => {
+      const imgWidth = img.width;
+      const imgHeight = img.height;
+      const imgBounds = [[0,0], [imgHeight, imgWidth]]; // simple CRS points
 
-    // Load GeoJSON file
-    fetch('events.geojson')
-      .then(res => res.json())
-      .then(data => {
-        const geojsonLayer = L.geoJSON(data, {
-          onEachFeature: function(feature, layer) {
-            const p = feature.properties || {};
-            const html = `<b>${p.name || 'Unknown'}</b><br><i>${p.type || ''}</i><br>${p.date || ''}<br>${p.description || ''}`;
-            layer.bindPopup(html);
-            // add to sidebar list
-            const list = document.getElementById('list');
-            const item = document.createElement('div');
-            item.style.marginTop = '6px';
-            item.innerHTML = `<a href="#" data-id="${p.id}">${p.name}</a>`;
-            list.appendChild(item);
-            item.querySelector('a').addEventListener('click', (e) => {
-              e.preventDefault();
-              map.fitBounds(layer.getBounds ? layer.getBounds() : layer.getLatLng().toBounds(0.5));
-              layer.openPopup();
-            });
-          },
-          pointToLayer: function(feature, latlng) {
-            return L.marker(latlng);
-          }
-        }).addTo(map);
+      const map = L.map('map', { crs: L.CRS.Simple, minZoom: -2 })
+                    .setView([imgHeight/2, imgWidth/2], 0);
 
-        // Fit map to features
-        try {
-          map.fitBounds(geojsonLayer.getBounds(), {padding:[40,40]});
-        } catch(e) { /* single point fallback */ }
-      })
-      .catch(err => {
-        console.error('Failed to load events.geojson', err);
-        alert('Could not load events.geojson. Make sure the file is in the same folder as index.html.');
-      });
+      L.imageOverlay(img.src, imgBounds).addTo(map);
+      map.setMaxBounds(imgBounds);
+
+      function toPixel(lat, lon) {
+        const x = (lon - realBounds.lonMin) / (realBounds.lonMax - realBounds.lonMin) * imgWidth;
+        const y = (realBounds.latMax - lat) / (realBounds.latMax - realBounds.latMin) * imgHeight;
+        return [y, x];
+      }
+
+      fetch('events.geojson')
+        .then(res => res.json())
+        .then(data => {
+          const geojsonLayer = L.geoJSON(data, {
+            onEachFeature: function(feature, layer) {
+              const p = feature.properties || {};
+              const html = `<b>${p.name || 'Unknown'}</b><br><i>${p.type || ''}</i><br>${p.date || ''}<br>${p.description || ''}`;
+              layer.bindPopup(html);
+              const list = document.getElementById('list');
+              const item = document.createElement('div');
+              item.style.marginTop = '6px';
+              item.innerHTML = `<a href="#" data-id="${p.id}">${p.name}</a>`;
+              list.appendChild(item);
+              item.querySelector('a').addEventListener('click', (e) => {
+                e.preventDefault();
+                map.fitBounds(layer.getBounds ? layer.getBounds() : layer.getLatLng().toBounds(0.5));
+                layer.openPopup();
+              });
+            },
+            pointToLayer: function(feature, latlng) {
+              const pix = toPixel(latlng.lat, latlng.lng);
+              return L.marker(pix);
+            }
+          }).addTo(map);
+
+          try {
+            map.fitBounds(geojsonLayer.getBounds(), {padding:[40,40]});
+          } catch(e) { /* single point fallback */ }
+        })
+        .catch(err => {
+          console.error('Failed to load events.geojson', err);
+          alert('Could not load events.geojson. Make sure the file is in the same folder as index.html.');
+        });
+
+      const fellowshipLatLon = [
+        [51.0, -2.5],   // The Shire
+        [50.5, -1.0],   // Bree
+        [50.9, -0.2],   // Weathertop Amon Sûl
+        [52.0, 1.2],    // Rivendell
+        [51.2, 2.8],    // Moria
+        [50.8, 3.6],    // Lothlorien
+        [50.2, 4.2]     // Amon Hen
+      ];
+      const fellowshipCoords = fellowshipLatLon.map(([lat,lon]) => toPixel(lat, lon));
+      const ant = L.polyline.antPath(fellowshipCoords, {
+        delay: 400,
+        dashArray: [10,20],
+        weight: 4,
+        color: '#8B0000',
+        pulseColor: '#FFD700'
+      }).addTo(map);
+    };
   </script>
 </body>
 </html>
